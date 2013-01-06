@@ -1,0 +1,21 @@
+</div>
+<div id="gototop">
+<?php 
+if(!$_SERVER[QUERY_STRING] == '') {
+    $thispage = $_SERVER[PHP_SELF].'?'.$_SERVER[QUERY_STRING];
+} else {
+    $thispage =& $_SERVER[PHP_SELF];
+}
+echo '<a href="'.$thispage.'#top">Back to top</a>';
+?>
+</div>
+<div id="foot">
+	<p class="nav"><a href="index.php">Home</a> | <a href="rss.php">Feed</a> | <a href="archive.php">Archive</a> |
+  <a href="articles.php">Articles</a> | <a href="sitemap.php">Sitemap</a></p>
+  <p>
+  Published by <a href="http://www.desiquintans.com/writersblock">Writer&#8217;s Block</a> <br />
+  Copyright 2005
+  </p>
+</div>
+</body>
+</html>

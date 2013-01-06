@@ -1,0 +1,1 @@
+<input type="checkbox" id="nltobr" name="autobreak" /><label for="nltobr">Convert new lines to &lt;br /&gt;s?</a>

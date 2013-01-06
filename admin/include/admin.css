@@ -1,0 +1,70 @@
+body {
+    margin: 0px;
+    padding: 0px;
+    font-family: Verdana, Geneva, Helvetica, Sans-Serif;
+    font-weight: normal;
+    font-size: 0.8em;
+    color: black;}
+#toolbar {
+    background-image: url('img/toolbar-bg.png');
+    padding: 10px;
+    background-color: white;
+    border-bottom: 3px groove #C0C0C0;}
+#masthead {
+    letter-spacing: -1px;
+    font-weight: normal;
+    font-family: Georgia, Rockwell, Garamond, Serif;
+    font-size: 1.3em;
+    padding-right: 10px;
+    border-right: 1px solid black;
+    margin-right: 10px;}
+img {
+    margin-bottom: -3px;
+    border: none;}
+.button, .offset {
+    border: 2px solid #D2D2D2;
+    padding: 4px;
+    background-color: #F9F9F9;
+    margin-right: 1px;}
+.button:hover, .offset:hover {
+    border: 2px outset #808080;}
+.offset {
+    margin-left: 15px;}
+#desktop {
+    margin: 1em;}
+h1 {
+	font-size: 1.5em;
+	letter-spacing: -1px;
+	font-weight: normal;
+	text-align: left;}
+h2 {
+	text-align: left;
+	font-size: 1.1em;
+	font-weight: bold;}
+#foot {
+    border-top: 1px solid #C0C0C0;
+	margin-top: 3em;
+    margin-bottom: 1em;
+	text-align: center;
+	font-size: 0.9em;
+	font-weight: normal;}
+a {
+    text-decoration: none;}
+legend {
+	font-weight: bold;
+	margin-bottom: 5px;}
+fieldset {
+	margin-bottom: 8px;
+	border: 2px solid #C3C3C3;
+	border-style: solid none none none;
+	padding: 10px;}
+input[type="text"], input[type="password"] {
+	margin-left: 5px;
+	margin-right: 30px;}
+input[type="text"].noformat, input[type="password"].noformat {
+	margin-left: 5px;
+	margin-right: 3px;}
+input[type="submit"] {
+    font-weight: bold;
+    color: white;
+    background-color: #5CA040;}

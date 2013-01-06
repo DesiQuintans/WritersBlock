@@ -1,0 +1,66 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="EN">
+    <head>
+    <!--
+    # Writer's Block v3.8: http://www.desiquintans.com/writersblock
+    # Writer's Block is free under version 2 or later of the GPL.
+    # This program is distributed with cursory support, but without
+    # warranty or guarantee of any sort.
+    -->
+    <title>
+    Writer's Block: <?php echo $pagetitle; ?>
+    </title>
+    <meta http-equiv="content-type" content="text/html; charset=us-ascii" />
+    <meta name="MSSmartTagsPreventParsing" content="true" />
+    <link rel="stylesheet" type="text/css" href="include/admin.css" media="screen" />
+    <script src="include/punctuator.js" type="text/javascript"></script>
+    </head>
+    <body>
+    <div id="toolbar">
+    <span id="masthead">Writer&#8217;s Block</span>
+    <a href="post.php?action=new" title="New blog post"><span class="button"><img src="include/img/blog_new.png" width="16" height="16" alt="New blog post | " title="New blog post" /></span></a>
+    <a href="post.php" title="Manage blog"><span class="button"><img src="include/img/blog_manage.png" width="16" height="16" alt="Manage blog | " title="Manage blog" /></span></a>
+
+    <a href="mini.php?item=blog&amp;action=new" title="New Mini-Blog"><span class="offset"><img src="include/img/miniblog_new.png" width="16" height="16" alt="New Mini-Blog | " title="New Mini-Blog" /></span></a>
+    <a href="mini.php" title="Manage Mini-Blogs"><span class="button"><img src="include/img/miniblog_manage.png" width="16" height="16" alt="Manage Mini-Blogs | " title="Manage Mini-Blogs" /></span></a>
+    
+    <a href="any.php?action=new" title="New Anypage"><span class="offset"><img src="include/img/any_new.png" width="16" height="16" alt="New Anypage | " title="New Anypage" /></span></a>
+    <a href="any.php" title="Manage Anypages"><span class="button"><img src="include/img/any_manage.png" width="16" height="16" alt="Manage Anypages | " title="Manage Anypages" /></span></a>
+
+
+    <a href="cat.php?action=new" title="New category"><span class="offset"><img src="include/img/cat_new.png" width="16" height="16" alt="New category | " title="New category" /></span></a>
+    <a href="cat.php" title="Manage categories"><span class="button"><img src="include/img/cat_manage.png" width="16" height="16" alt="Manage categories | " title="Manage categories" /></span></a>
+<?php
+if (isset($_COOKIE['auth_id'], $_COOKIE['auth_username'], $_COOKIE['auth_hash'])) {
+    $get_auth = mysql_query("SELECT Permission FROM ".USERS_TBL." WHERE UserID='".$_COOKIE['auth_id']."' AND UserName='".$_COOKIE['auth_username']."' AND Password='".$_COOKIE['auth_hash']."'");
+    $p = mysql_fetch_array($get_auth);
+
+    if ($p['Permission'] == 1) {
+        echo '
+        <a href="user.php?action=new" title="New user"><span class="offset"><img src="include/img/user_new.png" width="16" height="16" alt="New User | " title="New user" /></span></a>
+        <a href="user.php" title="Manage users"><span class="button"><img src="include/img/user_manage.png" width="16" height="16" alt="Manage users | " title="Manage users" /></span></a>
+        ';
+    }
+    if (($p['Permission'] == 1) or ($p['Permission'] == 2)) {
+        if ($p['Permission'] == 1) {
+            echo '
+            <a href="prefs.php" title="Edit WB\'s settings"><span class="offset"><img src="include/img/prefs.png" width="16" height="16" alt="Settings | " title="Edit WB\'s settings" /></span></a>
+            ';
+        }
+        echo '
+        <a href="comments.php" title="Moderate comments"><span class="button"><img src="include/img/comments.png" width="16" height="16" alt="Moderate comments | " title="Moderate comments" /></span></a>
+        <a href="massdelete.php" title="Mass-delete comments"><span class="button"><img src="include/img/massdelete.png" width="16" height="16" alt="Mass-delete comments | " title="Mass-delete comments" /></span></a>
+        ';
+        
+    }
+}
+?>
+    <a href="personal.php" title="Edit your details"><span class="offset"><img src="include/img/personal.png" width="16" height="16" alt="Your details | " title="Edit your details" /></span></a>
+    <a href="logout.php" title="Log out"><span class="button"><img src="include/img/logout.png" width="16" height="16" alt="Log out" title="Log out" /></span></a>
+    
+    <a href="<?php echo $siteurl_is; ?>" title="View my site"><span class="offset"><img src="include/img/viewsite.png" width="16" height="16" alt="View site" title="View site" /></span></a>
+    <a href="bugreport.php" title="Report a bug"><span class="button"><img src="include/img/bug.png" width="16" height="16" alt="Report a bug" title="Report a bug" /></span></a>
+    </div>
+<div id="desktop">
+<h1><?php echo $pagetitle; ?></h1>

@@ -1,0 +1,29 @@
+## Note that each comment line begins and ends with double-hashes. ##
+## Each blacklist entry is on its own line. There should be no     ##
+## spaces outside the hashed comments.                             ##
+## Escape reserved characters with \. Stay safe by escaping        ##
+## literal periods (\.).                                           ##
+
+## The below string catches strings of random letters. Thanks to   ##
+## our great English language, this is not all-inclusive, due to   ##
+## the existence of our friend, 'rhythm,' which has no vowels.     ##
+([^aeiouy\s\f\r\t\n\v\,\.\?\/\\\;\:\'\"\<\>\!\@\$\*\(\)\]\[\#\-\_]{6,})
+
+## Domains overrun by spammers ##
+@gteam\.net
+@mail\.com
+@mail15\.com
+@mail\.ru
+@onlineph\.info
+@rodrickybanez\.com
+@sos\.com
+@yandex\.com
+@urmypd\.com
+allsms
+
+## Common spammer user names ##
+easy.money
+insurance
+mohamed.mostafa
+online.casino
+viagra

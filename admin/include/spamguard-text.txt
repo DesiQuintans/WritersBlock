@@ -1,0 +1,24 @@
+## Note that each comment line begins and ends with double-hashes. ##
+## Each blacklist entry is on its own line. There should be no     ##
+## spaces outside the hashed comments.                             ##
+## Escape reserved characters with \. Stay safe by escaping        ##
+## literal periods (\.).                                           ##
+
+## Common strings ##
+\[url
+\[/url\]
+## More than half of spamments contain [url]. ##
+
+([^aeiouy\s\,\.\?\/\\\;\:\'\"\<\>\!\@\$\*\(\)\]\[\#\-\_]{6,})
+## The above string catches strings of random letters. Thanks to   ##
+## our great English language, this is not all-inclusive, due to   ##
+## the existence of our friend, 'rhythm,' which has no vowels.     ##
+
+(Good|Cool|Nice).site\..Thank.+<br />.*<a
+(Well.done|(Nice|Good).site|(Good|Great).work|Good.design|Thank.you)!<br />.*<a
+(Good|Cool|Nice).site\,.admin\.
+
+## Specific strings ##
+shemale
+travamura
+dofus

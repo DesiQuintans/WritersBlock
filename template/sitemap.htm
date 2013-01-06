@@ -1,0 +1,34 @@
+<!-- For your information, {ANYPAGES} outputs
+    <ul>
+    <li>Category name and link</li>
+        <ol>
+        <li>Anypage name and title</li>
+        <li>Anypage name and title</li>
+        ...
+        </ol>
+    </ul>
+for as many times as there are categories. This will always be so unless you change
+sitemap.php to make it not output in list-form.-->
+
+<!-- For your information, {BLOG_CATEGORIES} outputs
+    <ul>
+	    <li>Category name and link</li>
+	    <li>Category name and link</li>
+	    ...
+    </ul>
+-->
+
+<h1>{TITLE}</h1>
+<ul>
+    <li><a href="index.php">Home</a></li>
+    <ul>
+        <li><strong>Sitemap</strong> (this page)</li>
+        <li><a href="rss.php">RSS 2.0 Feed</a></li>
+        <li><a href="atom.php">Atom 1.0 Feed</a></li>
+        <li><a href="latestcomments.php">Latest Comments RSS 2.0 Feed</a></li>
+        <li><a href="archive.php">Archive</a></li>
+            {BLOG_CATEGORIES}
+        <li><a href="articles.php">Articles</a></li>
+            {ANYPAGES}
+    </ul>
+</ul>

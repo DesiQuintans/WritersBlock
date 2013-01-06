@@ -1,0 +1,28 @@
+body {
+	margin: 15px 10% 15px 10%;
+	font-family: Verdana, Geneva, Helvetica, Sans-Serif;
+	font-size: 1em;}
+#head, #foot {
+	text-align: center;}
+#masthead img {text-align: center;border: none;}
+.nav {
+	margin-top: 10px;
+	padding: 2px 0px 5px 0px;}
+#body {
+	text-align: justify;}
+#gototop, #subheading {
+	text-align: right;
+	font-weight: bold;}
+h1 {
+	font-weight: bold;
+	font-size: 1.5em;}
+h2 {
+	font-weight: normal;
+	font-size: 1.2em;}
+#bio {
+    margin-left: 30%;
+    margin-right: 30%;
+    padding: 7px;
+    background-color: #CCCCCC;
+    border: 1px #DDDDDD solid;
+    text-align: justify;}

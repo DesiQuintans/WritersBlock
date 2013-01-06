@@ -1,0 +1,23 @@
+HOW TO INSTALL WRITER'S BLOCK
+
+1) Extract the contents of this .zip file, being sure to maintain the directory
+   structure. You can do this by using the Extract function instead of dragging the
+   files out of the .zip.
+
+2) Open admin/control.php with a plain-text editor like Notepad or BBedit and put your
+   mySQL login details where required. You can rename the tables that Writer's Block
+   will use, but it is not necessary if you're only running one copy. There are also
+   other configuration options in control.php that you may wish to change.
+
+3) Upload all files except for this one to the public directory of your site (usually
+   this is where your FTP client puts you upon connection).
+
+4) Run install.php. Fill all the form fields. Delete install.php when it is finished.
+
+5) That's it. Log into the admin section with your username and password and start
+   using Writer's Block.
+
+Please read the manual at http://www.desiquintans.com/writersblock/manual/index.php.
+It explains a lot of things that are not explained in Writer's Block itself.
+
+You may notice that the default template looks like poo. Get creative!
