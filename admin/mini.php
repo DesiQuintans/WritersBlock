@@ -32,6 +32,7 @@ if($_POST['submitted']) {
     foreach($ItemArray as $key => $value) {
         $body=@str_replace($key, $value, $body);
     }
+    $body = str_replace("'", "&#146;", $body);
     if($_POST['draft']) $draft = 1; else $draft = 0;
 
     if($_POST['editentry']) {
